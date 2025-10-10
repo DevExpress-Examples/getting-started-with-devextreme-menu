@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { ClickEvent } from 'devextreme/ui/button';
+import notify from 'devextreme/ui/notify';
+import { DxMenuTypes } from 'devextreme-angular/ui/menu';
+import { DxCheckBoxTypes } from 'devextreme-angular/ui/check-box';
 
 @Component({
   selector: 'app-root',
@@ -7,14 +9,25 @@ import { ClickEvent } from 'devextreme/ui/button';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'Angular';
+  toggle = false;
 
-  counter = 0;
+  onItemClick(e: DxMenuTypes.ItemClickEvent): void {
+    if (e.itemData?.text) {
+      notify(`${e.itemData.text} has been clicked!`, 'info', 2000);
+    } else if (e.itemData?.icon) {
+      notify(
+        `${this.capitalize(e.itemData.icon)} has been clicked!`,
+        'info',
+        2000,
+      );
+    }
+  }
 
-  buttonText = 'Click count: 0';
+  onValueChanged(e: DxCheckBoxTypes.ValueChangedEvent): void {
+    this.toggle = e.value;
+  }
 
-  onClick(e: ClickEvent): void {
-    this.counter++;
-    this.buttonText = `Click count: ${this.counter}`;
+  private capitalize(str: string): string {
+    return str.charAt(0).toUpperCase() + str.slice(1);
   }
 }

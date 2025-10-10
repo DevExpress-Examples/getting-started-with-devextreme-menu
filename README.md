@@ -18,9 +18,10 @@ This repository stores the code examples of the Menu component for the [Getting 
 - **jQuery**
     - [index.js](jQuery/src/index.js)
 - **React**
-    - [App.js](React/src/App.js)
+    - [App.tsx](React/src/App.tsx)
 - **Vue**
     - [App.vue](Vue/src/App.vue)
+    - [MenuContent](Vue/src/components/MenuContent.vue)
 
 ## Documentation
 

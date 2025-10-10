@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import HomeContent from '../components/HomeContent.vue';
+import MenuContent from '../components/MenuContent.vue';
 </script>
 
 <template>
-  <HomeContent text="Count"/>
+  <MenuContent/>
 </template>
 

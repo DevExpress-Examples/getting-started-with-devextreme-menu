@@ -9,12 +9,16 @@ import type { DxCheckBoxTypes } from 'devextreme-vue/check-box';
 
 const toggle = ref<boolean>(false);
 
+function capitalize(str: string): string {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
 function onItemClick(e: DxMenuTypes.ItemClickEvent): void {
   if (e.itemData?.text) {
     notify(`${e.itemData.text} has been clicked!`, 'info', 2000);
   } else if (e.itemData?.icon) {
     notify(
-      `${e.itemData.icon.charAt(0).toUpperCase() + e.itemData.icon.slice(1)} has been clicked!`,
+      `${capitalize(e.itemData.icon)} has been clicked!`,
       'info',
       2000,
     );
