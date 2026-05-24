@@ -3,11 +3,13 @@ import notify from 'devextreme/ui/notify';
 import { DxMenuTypes } from 'devextreme-angular/ui/menu';
 import { DxCheckBoxTypes } from 'devextreme-angular/ui/check-box';
 
+import { DxMenuModule } from 'devextreme-angular/ui/menu';
+
 @Component({
     selector: 'app-root',
+    imports: [DxMenuModule],
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
-    standalone: false
 })
 export class AppComponent {
   toggle = false;
