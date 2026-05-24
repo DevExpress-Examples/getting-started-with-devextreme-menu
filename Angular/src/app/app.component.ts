@@ -4,10 +4,11 @@ import { DxMenuTypes } from 'devextreme-angular/ui/menu';
 import { DxCheckBoxTypes } from 'devextreme-angular/ui/check-box';
 
 import { DxMenuModule } from 'devextreme-angular/ui/menu';
+import { DxCheckBoxModule } from 'devextreme-angular/ui/check-box';
 
 @Component({
     selector: 'app-root',
-    imports: [DxMenuModule],
+    imports: [DxMenuModule, DxCheckBoxModule],
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
 })
