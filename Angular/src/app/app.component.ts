@@ -4,9 +4,10 @@ import { DxMenuTypes } from 'devextreme-angular/ui/menu';
 import { DxCheckBoxTypes } from 'devextreme-angular/ui/check-box';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    standalone: false
 })
 export class AppComponent {
   toggle = false;
